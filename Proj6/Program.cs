@@ -6,21 +6,35 @@ namespace Proj6
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Count_Letter("hello world",'l'));
+            //Console.WriteLine(Count_Letter("hello worldl", 'l'));
+            Console.WriteLine(FindSubSequence("1234567","1236"));
+            
+            
         }
 
-       static int Count_Letter(string sentence,char letter)
+       //static int Count_Letter(string sentence,char letter)
+       // {
+       //     int count = 0;
+       //     for(int i=0;i< sentence.Length; i++)
+       //     {
+       //         if (sentence[i] == letter)
+       //             count++;
+
+       //     }
+       //     return count;
+       // }
+      static bool FindSubSequence(string sequence,string sub)
         {
-            int count = 0;
-            for(int i=0;i< sentence.Length - 1; i++)
+
+            bool Isfound = false;
+           
+           if (sequence.Contains(sub))
             {
-                if (sentence[i] == 'l')
-                    count++;
-
-            }
-            return count;
-      
-
+                    Isfound = true;
+                    return Isfound;
+             }
+          
+            return Isfound;
         }
     }
 }
