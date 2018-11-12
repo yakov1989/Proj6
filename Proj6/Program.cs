@@ -17,8 +17,8 @@ namespace Proj6
             //int[] array = { 1, 2, 70, 4, 5 };
             //Console.WriteLine((MaxNum(array)));
 
-            string[] Symbols = { "MSFT", "INTC", "CSCO", "GOOG" };
-            double [] MonthlyGain = {-0.72,1.05,0.76,-1.49};
+            string[] Symbols =new string[] { "MSFT", "INTC", "CSCO", "GOOG" };
+            double [] MonthlyGain =new double[] {-0.72,1.05,0.76,-1.49};
             Console.WriteLine( CompanysGains(Symbols,MonthlyGain));
 
 
