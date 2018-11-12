@@ -23,6 +23,7 @@ namespace Proj6
        //     }
        //     return count;
        // }
+       //Options 1
       static bool FindSubSequence(string sequence,string sub)
         {
 
@@ -35,6 +36,14 @@ namespace Proj6
              }
           
             return Isfound;
+        }
+
+        //Options 2
+        static bool FindSubSequence2(string sequence, string sub)
+        {
+
+            return sequence.IndexOf(sub) != -1;
+
         }
     }
 }
