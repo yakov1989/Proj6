@@ -17,13 +17,17 @@ namespace Proj6
             //int[] array = { 1, 2, 70, 4, 5 };
             //Console.WriteLine((MaxNum(array)));
 
-            string[] Symbols =new string[] { "MSFT", "INTC", "CSCO", "GOOG" };
-            double [] MonthlyGain =new double[] {-0.72,1.05,0.76,-1.49};
-            Console.WriteLine( CompanysGains(Symbols,MonthlyGain));
-
-
-
-}
+            //string[] Symbols =new string[] { "MSFT", "INTC", "CSCO", "GOOG" };
+            //double [] MonthlyGain =new double[] {-0.72,1.05,0.76,-1.49};
+            //Console.WriteLine( CompanysGains(Symbols,MonthlyGain));
+            int[] array = new int[] { 1, 2, 3, 4, 5, 6 };
+            int[] Newarray = (FilterEvens(array));
+            for (int i = 0; i < Newarray.Length; i++)
+            {
+                Console.Write(Newarray[i] + " ");
+            }
+            Console.WriteLine();
+        }
 
         //Targil 1
 
@@ -120,32 +124,56 @@ namespace Proj6
 
         //}
         //Targil 5 Arrays
-        static int MaxNum(int [] numbers)
+        //static int MaxNum(int [] numbers)
+        //{
+        //   int Max = 0;
+        //    for(int i = 0; i < numbers.Length; i++)
+        //    {
+        //        if (numbers[i] > Max)
+        //            Max = numbers[i];
+        //    }
+        //    return Max;
+        //}
+
+        ////Targil 6 Arrays
+
+        //static string CompanysGains(string[] Companys,double[] gains)
+        //{
+        //    double max = 0;
+        //    string temp="";
+        //    for(int i = 0; i < gains.Length; i++)
+        //    {
+        //        if (gains[i] > max)
+        //        {
+        //            max = gains[i];
+        //            temp = Companys[i];
+        //        }
+        //    }
+        //    return temp;
+        //}
+
+        //Targil 7 Multiple references 
+        static int[] FilterEvens(int[] numbers)
         {
-           int Max = 0;
-            for(int i = 0; i < numbers.Length; i++)
+
+            int count = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                if (numbers[i] > Max)
-                    Max = numbers[i];
+                if (numbers[i] % 2 == 0)
+                    count++;
+
             }
-            return Max;
-        }
-
-        //Targil 6 Arrays
-
-        static string CompanysGains(string[] Companys,double[] gains)
-        {
-            double max = 0;
-            string temp="";
-            for(int i = 0; i < gains.Length; i++)
+            int[] EvenArray = new int[count];
+            for (int i = 0, j = 0; i < numbers.Length; i++)
             {
-                if (gains[i] > max)
+                if (numbers[i] % 2 == 0)
                 {
-                    max = gains[i];
-                    temp = Companys[i];
+                    EvenArray[j] = numbers[i];
+                    j++;
                 }
             }
-            return temp;
+            return EvenArray;
         }
     }
 
